@@ -13,11 +13,13 @@ function App() {
   return (
     <>
     <Navbar/>
-      <Routes>
+     <div className='all_data'>
+     <Routes>
         <Route exact path='/' element={<About/>}/>
         <Route path='/Contact' element={<Contact/>} />
         <Route path='/Apple' element={<Apple/>}/>
       </Routes>
+     </div>
     </>
   )
 }
