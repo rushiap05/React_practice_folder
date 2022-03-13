@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import {TodoItem} from "./components/TodoItem"
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -19,6 +20,17 @@ function App() {
     setInputItem("")
   }
 
+  const deleteItem = (id) => {
+    console.log("delete")
+
+    setInsertItem(oldItem => {
+      return oldItem.filter((arrEle,index)=> {
+        return index != id;
+      })
+    })
+}
+
+
   return (
     <div className='main_div'>
         <div className='center_div'>
@@ -28,11 +40,11 @@ function App() {
 
           <button onClick={putData}> + </button>
 
-          <ol>
-            {insertItem.map((items)=> {
-              return <li>{items}</li>
+          <div className='insert_div'>
+            {insertItem.map((items,index)=> {
+              return <TodoItem id={index} key={index} deleteIt={deleteItem} liData={items}/>
             })}
-          </ol>
+          </div>
         </div>
     </div>
   )
