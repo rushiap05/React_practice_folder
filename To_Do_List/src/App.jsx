@@ -14,7 +14,7 @@ function App() {
   }
 
   const putData = () => {
-    if(insertItem.length != 0){
+    if(inputItem.length != 0){
       setInsertItem(() => {
         return [...insertItem, inputItem]
       })
