@@ -14,10 +14,12 @@ function App() {
   }
 
   const putData = () => {
-    setInsertItem(() => {
-      return [...insertItem, inputItem]
-    })
-    setInputItem("")
+    if(insertItem.length != 0){
+      setInsertItem(() => {
+        return [...insertItem, inputItem]
+      })
+      setInputItem("")
+    }
   }
 
   const deleteItem = (id) => {
