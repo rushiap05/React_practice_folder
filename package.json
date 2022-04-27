@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "create-vite": "^2.9.2",
+    "vite": "^2.8.6"
+  }
+}
